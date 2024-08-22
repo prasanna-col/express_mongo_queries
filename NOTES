@@ -1,0 +1,13 @@
+Install the needful packages for express:
+1. npm i express
+2. npm i mongoose
+3. npm i dotenv
+
+Install the dev dependencies:
+1. npm install --save-dev nodemon 
+
+Also update the Script json on packagejson file like below:
+1. "start":"nodmon index.js"
+2. also add type as module at top of script // "type":"module"
+
+
