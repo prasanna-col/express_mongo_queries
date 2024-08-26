@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Laptop",
+    "brand": "Apple",
+    "price": 1500,
+    "stock": 50,
+    "categories": ["Electronics", "Computers"],
+    "release_date": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "Smartphone",
+    "brand": "Samsung",
+    "price": 1000,
+    "stock": 150,
+    "categories": ["Electronics", "Mobile"],
+    "release_date": "2023-11-01T00:00:00Z"
+  },
+  {
+    "name": "Tablet",
+    "brand": "Apple",
+    "price": 800,
+    "stock": 30,
+    "categories": ["Electronics", "Computers"],
+    "release_date": "2023-12-01T00:00:00Z"
+  }
+]

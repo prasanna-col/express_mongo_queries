@@ -1,0 +1,23 @@
+[
+  {
+    "name": "John Doe",
+    "age": 20,
+    "subjects": ["Math", "Science"],
+    "address": { "street": "123 Main St", "city": "New York", "zip": "10001" },
+    "enrollment_date": "2023-09-01T00:00:00Z"
+  },
+  {
+    "name": "Jane Smith",
+    "age": 22,
+    "subjects": ["English", "Arts"],
+    "address": { "street": "456 Elm St", "city": "San Francisco", "zip": "94101" },
+    "enrollment_date": "2023-08-15T00:00:00Z"
+  },
+  {
+    "name": "Sam Brown",
+    "age": 19,
+    "subjects": ["Math", "Computer Science"],
+    "address": { "street": "789 Oak St", "city": "Chicago", "zip": "60601" },
+    "enrollment_date": "2023-07-20T00:00:00Z"
+  }
+]

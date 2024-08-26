@@ -1,12 +1,19 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv"
-// import cors from "cors";
-// import userRoutes from "./routes/userRoutes.js";
-// import postRoutes from "./routes/postRoutes.js";
+import bodyParser from 'body-parser';
+import cors from "cors";
+
+// Routers 
+import StudentRoutes from "./routes/student.js"
+import AddSchoolStudentRoute from './routes/SchoolStudent/addSchoolStudent.js'; 
+import AddProductRoute from "./routes/Product/addProduct.js"
 
 const app = express();
+
 dotenv.config();
+app.use(bodyParser.json());
+app.use(cors())
 
 const PORT = process.env.PORT || 8000;
 const MONGOURL = process.env.MONGOURL || "mongodb://localhost:27017/pvthetest";
@@ -17,16 +24,15 @@ mongoose.connect(MONGOURL).then(() => {
 }).catch((err) => console.log(`DB ERR: ${err}`))
 
 
-const studentSchema = new mongoose.Schema({
-    name:String,
-    age:Number
-}, { collection: 'student' })
+app.use(StudentRoutes)
+app.use(AddSchoolStudentRoute)
 
-const StudentModal = new mongoose.model("student", studentSchema)
+// Product routers
+app.use(AddProductRoute)
 
 
-app.get("/get_student_data", async (req, res)=>{
-    const studentdata = await StudentModal.find();
-    // console.log("studentdata::", studentdata)
-    res.json(studentdata);
-});
+// Error handling middleware (optional)
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
+  });
