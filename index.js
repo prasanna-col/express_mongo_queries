@@ -8,6 +8,7 @@ import cors from "cors";
 import StudentRoutes from "./routes/student.js"
 import AddSchoolStudentRoute from './routes/SchoolStudent/addSchoolStudent.js'; 
 import AddProductRoute from "./routes/Product/addProduct.js"
+import AddOrderRoute from "./routes/Order/createOrder.js"
 
 const app = express();
 
@@ -29,6 +30,9 @@ app.use(AddSchoolStudentRoute)
 
 // Product routers
 app.use(AddProductRoute)
+
+// Order routers
+app.use(AddOrderRoute)
 
 
 // Error handling middleware (optional)
